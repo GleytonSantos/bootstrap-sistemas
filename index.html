@@ -1,67 +1,421 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game World</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .hero {
+        color: white;
+      }
+      .btn-primary {
+        background-color: #6f42c1;
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: #59359a;
+      }
+      .products img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      footer {
+        background-color: #343a40;
+        color: white;
+        padding: 20px 0;
+      }
+      footer a {
+        color: #6f42c1;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .cropped-image {
+        height: 400px; /* Ajuste a altura desejada */
+        object-fit: cover; /* Corta a imagem mantendo as proporções */
+        object-position: top; /* Centraliza a parte visível da imagem */
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Brain Tech</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-            </ul>
-            <span class="navbar-text">
-              -
-            </span>
-          </div>
-        </div>
-      </nav>
-      <!-- inicio carrosel -->
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+    <!-- Header -->
+    <header class="bg-dark text-white py-1">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- <h1 class="h3">Game World</h1> -->
+        <img
+          src="./src/img/image0_0.jpg"
+          alt=""
+          style="margin: 0px; padding: 0"
+          width="7%"
+          height="5%"
+        />
+        <nav>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#home" class="nav-link text-white">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#catalog" class="nav-link text-white">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link text-white">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./src/img/img1.jpg" class="d-block w-100" alt="...">
+            <img
+              src="./src/img/online-games-2560-x-1440-wallpaper-v192lqrnt2hpqd1s.jpg"
+              class="d-block w-100 cropped-image img-fluid"
+              alt="Hero 1"
+            />
+            <div class="carousel-caption">
+              <h1
+                class="display-4 bg-dark bg-opacity-75 rounded fs-3 fs-md-2 fs-lg-1"
+              >
+                Explore o Universo dos Games!
+              </h1>
+            </div>
           </div>
           <div class="carousel-item">
-            <img src="./src/img/img2.jpeg" class="d-block w-100" alt="...">
+            <img
+              src="./src/img/image.png"
+              class="d-block w-100 cropped-image img-fluid"
+              alt="Hero 2"
+            />
+            <div class="carousel-caption">
+              <h1
+                class="display-4 bg-dark bg-opacity-75 rounded fs-3 fs-md-2 fs-lg-1"
+              >
+                Jogos Clássicos e Modernos
+              </h1>
+            </div>
           </div>
           <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
+            <img
+              src="./src/img/ofertas_tech_dia_dos_pais.jpg"
+              class="d-block w-100 cropped-image img-fluid"
+              alt="Hero 3"
+            />
+            <div class="carousel-caption">
+              <h1
+                class="display-4 bg-dark bg-opacity-75 rounded fs-3 fs-md-2 fs-lg-1"
+              >
+                Acessórios de Alta Performance
+              </h1>
+            </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
         </button>
       </div>
-      
+    </section>
 
+    <!-- Products Section -->
+    <section id="catalog" class="py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-4 text-center">Nosso Catálogo de Produtos</h2>
+        <div class="row g-4 products">
+          <div class="col-md-4 product-item">
+            <div class="card">
+              <div
+                id="carouselProduct1"
+                class="carousel slide"
+                data-bs-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./src/img/products/ds 5 0.jpg"
+                      class="d-block w-100 img-fluid"
+                      alt="Produto 1 Imagem 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./src/img/products/ds5 1.jpg"
+                      class="d-block w-100 img-fluid"
+                      alt="Produto 1 Imagem 2"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./src/img/products/ds5 2.jpg"
+                      class="d-block w-100 img-fluid"
+                      alt="Produto 1 Imagem 3"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselProduct1"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselProduct1"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Controle DualShock 5</h5>
+                <p class="card-text">
+                  Descubra uma profunda e imersiva experiência de jogo com o
+                  inovador DualSense. <br /><br />
+                  Resposta Tátil: Sinta em suas mãos a resposta tátil em seus
+                  jogos com atuadores duplos, isso substitui os barulhentos
+                  motores tradicionais. <br /><br />
+                  Microfone embutido e entrada para headset
+                </p>
+                <a href="#" class="btn btn-primary">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 product-item">
+            <div class="card">
+              <div
+                id="carouselProduct2"
+                class="carousel slide"
+                data-bs-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./src/img/products/hs 0.jpg"
+                      class="d-block w-100"
+                      alt="Produto 2 Imagem 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./src/img/products/hs 1.jpg"
+                      class="d-block w-100"
+                      alt="Produto 2 Imagem 2"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./src/img/products/hs 2.jpg"
+                      class="d-block w-100"
+                      alt="Produto 2 Imagem 3"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselProduct2"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselProduct2"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Headset Gamer Logitech G335</h5>
+                <p class="card-text">
+                  Qualidade de áudio a nível de jogo combinado a cores
+                  divertidas e vibrantes. Leve, com faixa de cabeça ajustável e
+                  almofadas com espuma de memória para transformar o jogo em uma
+                  experiência verdadeiramente agradável.
+                </p>
+                <a href="#" class="btn btn-primary">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 product-item">
+            <div class="card">
+              <div
+                id="carouselProduct3"
+                class="carousel slide"
+                data-bs-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./src/img/products/tl 1.jpg"
+                      class="d-block w-100"
+                      alt="Produto 3 Imagem 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./src/img/products/tl 2.jpg"
+                      class="d-block w-100"
+                      alt="Produto 3 Imagem 2"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./src/img/products/tl 3.jpg"
+                      class="d-block w-100"
+                      alt="Produto 3 Imagem 3"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselProduct3"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselProduct3"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Teclado Mecânico Logitech G G515</h5>
+                <p class="card-text">
+                  Experiência de nível superior com um design slim e engenharia
+                  pensada para desempenho.
+                </p>
+                <a href="#" class="btn btn-primary">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-4">Entre em Contato</h2>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nome</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Seu nome"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Seu e-mail"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensagem</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              placeholder="Sua mensagem"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>Endereço: Avenida Otávio Santos, 123 - Vitória da Conquista, BA</p>
+        <p>Telefone: (77) 98765-4321 | E-mail: contato@gameworld.com</p>
+        <p>
+          Siga-nos: <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+          <a href="#">Twitter</a>
+        </p>
+        <p>
+          <button class="btn btn-primary" id="newsletterBtn">
+            Inscreva-se na nossa newsletter
+          </button>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Filter Products
+      const searchInput = document.getElementById("searchInput");
+      const productList = document.getElementById("productList");
+      searchInput.addEventListener("input", function () {
+        const query = searchInput.value.toLowerCase();
+        document.querySelectorAll(".product-item").forEach((item) => {
+          const name = item.getAttribute("data-name").toLowerCase();
+          item.style.display = name.includes(query) ? "" : "none";
+        });
+      });
+
+      // Newsletter Popup
+      const newsletterBtn = document.getElementById("newsletterBtn");
+      newsletterBtn.addEventListener("click", function () {
+        alert("Obrigado por se inscrever na nossa newsletter!");
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
